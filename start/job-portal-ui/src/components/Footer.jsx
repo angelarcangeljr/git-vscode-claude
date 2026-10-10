@@ -149,10 +149,32 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <span className="group relative">
+                <button
+                  type="button"
+                  aria-describedby="cookie-policy-tooltip"
+                  className="relative hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Cookie Policy</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+                <div
+                  id="cookie-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 z-20 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-300"
+                >
+                  <div className="relative overflow-hidden bg-gray-900/95 backdrop-blur border border-gray-700/50 rounded-xl shadow-2xl p-4 text-left">
+                    <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-primary-400 to-purple-400"></div>
+                    <p className="text-white font-semibold text-sm mb-1">Cookie Policy</p>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      We use essential cookies to keep you signed in and remember
+                      your preferences, and optional analytics cookies to improve
+                      JobPortal. You can manage cookies in your browser settings.
+                    </p>
+                  </div>
+                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-3 h-3 rotate-45 bg-gray-900 border-r border-b border-gray-700/50"></div>
+                </div>
+              </span>
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"
