@@ -175,13 +175,31 @@ const Footer = () => {
                   <div className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-3 h-3 rotate-45 bg-gray-900 border-r border-b border-gray-700/50"></div>
                 </div>
               </span>
-              <Link
-                to="/contact"
-                className="group relative hover:text-white transition-colors duration-300"
-              >
-                <span className="relative z-10">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </Link>
+              <span className="group relative">
+                <Link
+                  to="/contact"
+                  aria-describedby="contact-us-tooltip"
+                  className="relative hover:text-white focus:outline-none focus-visible:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Contact Us</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </Link>
+                <div
+                  id="contact-us-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 z-20 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-300"
+                >
+                  <div className="relative overflow-hidden bg-gray-900/95 backdrop-blur border border-gray-700/50 rounded-xl shadow-2xl p-4 text-left">
+                    <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-primary-400 to-purple-400"></div>
+                    <p className="text-white font-semibold text-sm mb-1">Need help?</p>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Facing a problem or have a question? Click here to open the
+                      Contact page and send a message to our admin team.
+                    </p>
+                  </div>
+                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-1.5 w-3 h-3 rotate-45 bg-gray-900 border-r border-b border-gray-700/50"></div>
+                </div>
+              </span>
             </div>
             <div className="text-center md:text-right">
               <div className="text-gray-400 text-sm mb-2">
